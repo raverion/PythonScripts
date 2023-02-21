@@ -1,9 +1,0 @@
-message = 'It was a bright cold day in April, and the clocks were striking thirteen.'
-
-count = {}
-
-for char in message.upper():
-    count.setdefault(char,0)
-    count[char] += 1
-
-print(count)
