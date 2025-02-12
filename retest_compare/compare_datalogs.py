@@ -1,176 +1,125 @@
 import pandas as pd
 import re
-from pathlib import Path
+from typing import Dict, List, Tuple
 
-class TestResult:
-    def __init__(self, part_id, bin_num, site_num, x_pos, y_pos, wafer):
-        self.part_id = part_id
-        self.bin_num = bin_num
-        self.site_num = site_num
-        self.x_pos = x_pos
-        self.y_pos = y_pos
-        self.wafer = wafer
-        self.fail_measurements = []
+class ATELogAnalyzer:
+    def __init__(self, reference_file: str, retest_file: str):
+        self.reference_file = reference_file
+        self.retest_file = retest_file
+        self.die_data = {}  # Store processed data for each die
 
-class FailMeasurement:
-    def __init__(self, test_num, test_name, measurement, unit, min_limit, max_limit):
-        self.test_num = test_num
-        self.test_name = test_name
-        self.measurement = measurement
-        self.unit = unit
-        self.min_limit = min_limit
-        self.max_limit = max_limit
-
-def parse_part_header(header_line):
-    # Extract part information using regex
-    part_pattern = r'Part ID:\s*"(\d+)"\s*Bin:\s*(\d+)\s*Site:\s*(\d+)\s*XPos:\s*(\d+)\s*YPos:\s*(\d+)\s*Wafer:\s*(\d+)'
-    match = re.search(part_pattern, header_line)
-    if match:
-        return TestResult(
-            part_id=match.group(1),
-            bin_num=int(match.group(2)),
-            site_num=int(match.group(3)),
-            x_pos=int(match.group(4)),
-            y_pos=int(match.group(5)),
-            wafer=int(match.group(6))
-        )
-    return None
-
-def parse_measurement_line(line):
-    # Extract measurement information using regex
-    measurement_pattern = r'^\s*(\d+)\s+\((.*?)\)\s+([-\d.]+)\s+(\w+)?\s*<\s*(F)?\s*>\s*MIN\s*:\s*([-\d.]+|not specified)\s*MAX\s*:\s*([-\d.]+|not specified)'
-    match = re.search(measurement_pattern, line)
-    if match and match.group(5) == 'F':  # Only capture failing measurements
-        return FailMeasurement(
-            test_num=int(match.group(1)),
-            test_name=match.group(2).strip(),
-            measurement=float(match.group(3)),
-            unit=match.group(4) if match.group(4) else '',
-            min_limit=match.group(6),
-            max_limit=match.group(7)
-        )
-    return None
-
-def read_datalog(file_path):
-    results = {}
-    current_part = None
-    
-    with open(file_path, 'r') as f:
-        for line in f:
-            if 'TEST RESULTS PART' in line:
-                next_line = next(f)
-                current_part = parse_part_header(next_line)
-                if current_part:
-                    key = (current_part.x_pos, current_part.y_pos, current_part.wafer)
-                    results[key] = current_part
-            elif current_part:
-                measurement = parse_measurement_line(line)
-                if measurement:
-                    current_part.fail_measurements.append(measurement)
-    
-    return results
-
-def find_matching_measurement(test_num, retest_lines):
-    measurement_pattern = rf'^\s*{test_num}\s+\((.*?)\)\s+([-\d.]+)\s+(\w+)?\s*<\s*\w*\s*>\s*MIN\s*:\s*([-\d.]+|not specified)\s*MAX\s*:\s*([-\d.]+|not specified)'
-    for line in retest_lines:
-        match = re.search(measurement_pattern, line)
-        if match:
-            return FailMeasurement(
-                test_num=test_num,
-                test_name=match.group(1).strip(),
-                measurement=float(match.group(2)),
-                unit=match.group(3) if match.group(3) else '',
-                min_limit=match.group(4),
-                max_limit=match.group(5)
-            )
-    return None
-
-def compare_datalogs(first_file, retest_file, output_file):
-    # Read both datalogs
-    first_results = read_datalog(first_file)
-    
-    # Create Excel writer
-    writer = pd.ExcelWriter(output_file, engine='xlsxwriter')
-    workbook = writer.book
-    worksheet = workbook.add_worksheet('Comparison Results')
-    
-    # Format headers
-    header_format = workbook.add_format({'bold': True, 'bg_color': '#D3D3D3'})
-    worksheet.write(0, 0, 'Die Location (X, Y, Wafer)', header_format)
-    worksheet.write(0, 1, 'First Insertion Results', header_format)
-    worksheet.write(0, 2, 'Retest Results', header_format)
-    
-    row = 1
-    
-    # Process each failing part from first insertion
-    for (x, y, wafer), first_result in first_results.items():
-        # Write die location
-        worksheet.write(row, 0, f"X:{x}, Y:{y}, W:{wafer}")
+    def parse_file(self, filename: str) -> Dict:
+        """Parse ATE log file and extract test data for each die."""
+        parts_data = {}
+        current_part = None
         
-        # Write first insertion results
-        worksheet.write(row, 1, f"Part ID: {first_result.part_id}, Bin: {first_result.bin_num}, Site: {first_result.site_num}")
-        
-        # Find corresponding retest results
-        retest_part = None
-        retest_measurements = {}
-        
-        with open(retest_file, 'r') as f:
-            retest_lines = []
-            capturing = False
-            for line in f:
-                if f'XPos: {x:>6}   YPos: {y:>6}   Wafer: {wafer}' in line:
-                    capturing = True
-                    retest_lines = [line]
-                elif capturing and 'TEST RESULTS PART' in line:
-                    capturing = False
-                elif capturing:
-                    retest_lines.append(line)
-                    if line.strip() == '':
-                        capturing = False
-        
-        if retest_lines:
-            header_line = next((line for line in retest_lines if 'Part ID' in line), None)
-            if header_line:
-                retest_part = parse_part_header(header_line)
-                worksheet.write(row, 2, f"Part ID: {retest_part.part_id}, Bin: {retest_part.bin_num}, Site: {retest_part.site_num}")
-        
-        row += 1
-        
-        # Write measurements
-        for fail_meas in first_result.fail_measurements:
-            # Write first insertion measurement
-            worksheet.write(row, 1, f"Test {fail_meas.test_num}: {fail_meas.test_name}\n"
-                                  f"Measurement: {fail_meas.measurement} {fail_meas.unit}\n"
-                                  f"Limits: MIN={fail_meas.min_limit}, MAX={fail_meas.max_limit}")
+        with open(filename, 'r') as f:
+            lines = f.readlines()
             
-            # Find and write corresponding retest measurement
-            if retest_lines:
-                retest_meas = find_matching_measurement(fail_meas.test_num, retest_lines)
-                if retest_meas:
-                    worksheet.write(row, 2, f"Test {retest_meas.test_num}: {retest_meas.test_name}\n"
-                                          f"Measurement: {retest_meas.measurement} {retest_meas.unit}\n"
-                                          f"Limits: MIN={retest_meas.min_limit}, MAX={retest_meas.max_limit}")
-            row += 1
+        for line in lines:
+            # Check for new part section
+            if "TEST RESULTS PART" in line:
+                continue
+                
+            # Extract part identifiers and result info
+            part_match = re.search(r'Part ID:\s*"(\d+)"\s*Bin:\s*(\d+)\s*Site:\s*(\d+)\s*XPos:\s*(\d+)\s*YPos:\s*(\d+)\s*Wafer:\s*(\d+)', line)
+            if part_match:
+                part_id, bin_num, site_num, x_pos, y_pos, wafer = part_match.groups()
+                current_part = (int(x_pos), int(y_pos), int(wafer))
+                if current_part not in parts_data:
+                    parts_data[current_part] = {
+                        'result': f"Part {part_id} Bin {bin_num} Site {site_num}",
+                        'measurements': []
+                    }
+                continue
+            
+            # Extract test measurements
+            test_match = re.search(r'^\s*(\d+)\s*\((.*?)\)\s*([-\d.]+)\s*([^\s<]+)\s*<\s*([F]?)\s*>\s*MIN\s*:\s*([-\d.]+|not specified)\s*MAX\s*:\s*([-\d.]+|not specified)', line)
+            if test_match and current_part:
+                test_num, test_name, measurement, unit, fail_flag, min_limit, max_limit = test_match.groups()
+                if fail_flag == 'F' or filename == self.retest_file:  # Include all tests for retest file
+                    parts_data[current_part]['measurements'].append({
+                        'test_num': int(test_num),
+                        'test_name': test_name.strip(),
+                        'measurement': float(measurement),
+                        'unit': unit,
+                        'min_limit': min_limit if min_limit == 'not specified' else float(min_limit),
+                        'max_limit': max_limit if max_limit == 'not specified' else float(max_limit),
+                        'fail': fail_flag == 'F'
+                    })
         
-        row += 1  # Add space between parts
-    
-    # Adjust column widths
-    worksheet.set_column(0, 0, 20)
-    worksheet.set_column(1, 2, 50)
-    
-    writer.close()
+        return parts_data
+
+    def compare_logs(self) -> pd.DataFrame:
+        """Compare reference and retest logs and generate comparison data."""
+        reference_data = self.parse_file(self.reference_file)
+        retest_data = self.parse_file(self.retest_file)
+        
+        comparison_rows = []
+        
+        for die_pos, ref_info in reference_data.items():
+            # Add die identifier row
+            x_pos, y_pos, wafer = die_pos
+            comparison_rows.append({
+                'Die Location': f"X{x_pos} Y{y_pos} W{wafer}",
+                'First Insertion': ref_info['result'],
+                'Retest': retest_data.get(die_pos, {}).get('result', 'Not Found')
+            })
+            
+            # Add measurement comparison rows
+            for ref_meas in ref_info['measurements']:
+                retest_meas = None
+                if die_pos in retest_data:
+                    for meas in retest_data[die_pos]['measurements']:
+                        if meas['test_num'] == ref_meas['test_num']:
+                            retest_meas = meas
+                            break
+                
+                ref_text = (f"Test {ref_meas['test_num']} {ref_meas['test_name']}: "
+                           f"{ref_meas['measurement']} {ref_meas['unit']} "
+                           f"(MIN: {ref_meas['min_limit']} MAX: {ref_meas['max_limit']})")
+                
+                retest_text = ''
+                if retest_meas:
+                    retest_text = (f"Test {retest_meas['test_num']} {retest_meas['test_name']}: "
+                                 f"{retest_meas['measurement']} {retest_meas['unit']} "
+                                 f"(MIN: {retest_meas['min_limit']} MAX: {retest_meas['max_limit']})")
+                
+                comparison_rows.append({
+                    'Die Location': '',
+                    'First Insertion': ref_text,
+                    'Retest': retest_text
+                })
+            
+            # Add blank row between dies
+            comparison_rows.append({
+                'Die Location': '',
+                'First Insertion': '',
+                'Retest': ''
+            })
+        
+        return pd.DataFrame(comparison_rows)
+
+    def generate_report(self, output_file: str):
+        """Generate Excel report comparing the test results."""
+        comparison_df = self.compare_logs()
+        
+        # Write to Excel with formatting
+        with pd.ExcelWriter(output_file, engine='openpyxl') as writer:
+            comparison_df.to_excel(writer, index=False, sheet_name='Retest Comparison')
+            
+            # Get the worksheet
+            worksheet = writer.sheets['Retest Comparison']
+            
+            # Adjust column widths
+            worksheet.column_dimensions['A'].width = 15
+            worksheet.column_dimensions['B'].width = 50
+            worksheet.column_dimensions['C'].width = 50
 
 def main():
-    # Get file paths from user
-    first_file = input("Enter the path to the first insertion datalog file: ")
-    retest_file = input("Enter the path to the retest datalog file: ")
-    output_file = input("Enter the desired output Excel file path: ")
-    
-    try:
-        compare_datalogs(first_file, retest_file, output_file)
-        print(f"\nComparison completed successfully. Results saved to {output_file}")
-    except Exception as e:
-        print(f"An error occurred: {str(e)}")
+    # Example usage
+    analyzer = ATELogAnalyzer('w01a.txt', 'w01b.txt')
+    analyzer.generate_report('retest_comparison.xlsx')
 
 if __name__ == "__main__":
     main()
