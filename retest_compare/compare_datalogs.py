@@ -8,6 +8,22 @@ class ATELogAnalyzer:
         self.retest_file = retest_file
         self.die_data = {}  # Store processed data for each die
 
+    def parse_measurement(self, value_str: str) -> float:
+        """Safely parse measurement values, handling special cases."""
+        try:
+            # Remove any whitespace
+            value_str = value_str.strip()
+            
+            # Handle special cases
+            if value_str == 'not specified' or value_str == '':
+                return float('nan')
+            
+            # Try to convert to float
+            return float(value_str)
+        except ValueError:
+            print(f"Warning: Could not parse measurement value: {value_str}")
+            return float('nan')
+
     def parse_file(self, filename: str) -> Dict:
         """Parse ATE log file and extract test data for each die."""
         parts_data = {}
@@ -16,37 +32,54 @@ class ATELogAnalyzer:
         with open(filename, 'r') as f:
             lines = f.readlines()
             
-        for line in lines:
-            # Check for new part section
-            if "TEST RESULTS PART" in line:
-                continue
+        for line_num, line in enumerate(lines, 1):
+            try:
+                # Check for new part section
+                if "TEST RESULTS PART" in line:
+                    continue
+                    
+                # Extract part identifiers and result info
+                part_match = re.search(r'Part ID:\s*"(\d+)"\s*Bin:\s*(\d+)\s*Site:\s*(\d+)\s*XPos:\s*(\d+)\s*YPos:\s*(\d+)\s*Wafer:\s*(\d+)', line)
+                if part_match:
+                    part_id, bin_num, site_num, x_pos, y_pos, wafer = part_match.groups()
+                    current_part = (int(x_pos), int(y_pos), int(wafer))
+                    if current_part not in parts_data:
+                        parts_data[current_part] = {
+                            'result': f"Part {part_id} Bin {bin_num} Site {site_num}",
+                            'measurements': []
+                        }
+                    continue
                 
-            # Extract part identifiers and result info
-            part_match = re.search(r'Part ID:\s*"(\d+)"\s*Bin:\s*(\d+)\s*Site:\s*(\d+)\s*XPos:\s*(\d+)\s*YPos:\s*(\d+)\s*Wafer:\s*(\d+)', line)
-            if part_match:
-                part_id, bin_num, site_num, x_pos, y_pos, wafer = part_match.groups()
-                current_part = (int(x_pos), int(y_pos), int(wafer))
-                if current_part not in parts_data:
-                    parts_data[current_part] = {
-                        'result': f"Part {part_id} Bin {bin_num} Site {site_num}",
-                        'measurements': []
-                    }
+                # Extract test measurements
+                # Updated regex to be more flexible with number formats
+                test_match = re.search(r'^\s*(\d+)\s*\((.*?)\)\s*([-+]?\d*\.?\d*(?:[Ee][-+]?\d+)?)\s*([^\s<]*)\s*<\s*([F]?)\s*>\s*MIN\s*:\s*([-+]?\d*\.?\d*(?:[Ee][-+]?\d+)?|not specified)\s*MAX\s*:\s*([-+]?\d*\.?\d*(?:[Ee][-+]?\d+)?|not specified)', line)
+                if test_match and current_part:
+                    test_num, test_name, measurement, unit, fail_flag, min_limit, max_limit = test_match.groups()
+                    
+                    # Only process if it's a fail in reference file or if it's the retest file
+                    if fail_flag == 'F' or filename == self.retest_file:
+                        try:
+                            measurement_value = self.parse_measurement(measurement)
+                            min_value = self.parse_measurement(min_limit)
+                            max_value = self.parse_measurement(max_limit)
+                            
+                            parts_data[current_part]['measurements'].append({
+                                'test_num': int(test_num),
+                                'test_name': test_name.strip(),
+                                'measurement': measurement_value,
+                                'unit': unit.strip(),
+                                'min_limit': min_value,
+                                'max_limit': max_value,
+                                'fail': fail_flag == 'F'
+                            })
+                        except ValueError as e:
+                            print(f"Warning: Error processing measurement in file {filename}, line {line_num}: {e}")
+                            continue
+                            
+            except Exception as e:
+                print(f"Warning: Error processing line {line_num} in file {filename}: {e}")
+                print(f"Line content: {line.strip()}")
                 continue
-            
-            # Extract test measurements
-            test_match = re.search(r'^\s*(\d+)\s*\((.*?)\)\s*([-\d.]+)\s*([^\s<]+)\s*<\s*([F]?)\s*>\s*MIN\s*:\s*([-\d.]+|not specified)\s*MAX\s*:\s*([-\d.]+|not specified)', line)
-            if test_match and current_part:
-                test_num, test_name, measurement, unit, fail_flag, min_limit, max_limit = test_match.groups()
-                if fail_flag == 'F' or filename == self.retest_file:  # Include all tests for retest file
-                    parts_data[current_part]['measurements'].append({
-                        'test_num': int(test_num),
-                        'test_name': test_name.strip(),
-                        'measurement': float(measurement),
-                        'unit': unit,
-                        'min_limit': min_limit if min_limit == 'not specified' else float(min_limit),
-                        'max_limit': max_limit if max_limit == 'not specified' else float(max_limit),
-                        'fail': fail_flag == 'F'
-                    })
         
         return parts_data
 
@@ -75,15 +108,22 @@ class ATELogAnalyzer:
                             retest_meas = meas
                             break
                 
-                ref_text = (f"Test {ref_meas['test_num']} {ref_meas['test_name']}: "
-                           f"{ref_meas['measurement']} {ref_meas['unit']} "
-                           f"(MIN: {ref_meas['min_limit']} MAX: {ref_meas['max_limit']})")
+                # Format measurement string with handling for 'nan' values
+                def format_measurement(meas):
+                    if pd.isna(meas['measurement']):
+                        measurement_str = "N/A"
+                    else:
+                        measurement_str = f"{meas['measurement']}"
+                    
+                    min_limit = "not specified" if pd.isna(meas['min_limit']) else f"{meas['min_limit']}"
+                    max_limit = "not specified" if pd.isna(meas['max_limit']) else f"{meas['max_limit']}"
+                    
+                    return (f"Test {meas['test_num']} {meas['test_name']}: "
+                           f"{measurement_str} {meas['unit']} "
+                           f"(MIN: {min_limit} MAX: {max_limit})")
                 
-                retest_text = ''
-                if retest_meas:
-                    retest_text = (f"Test {retest_meas['test_num']} {retest_meas['test_name']}: "
-                                 f"{retest_meas['measurement']} {retest_meas['unit']} "
-                                 f"(MIN: {retest_meas['min_limit']} MAX: {retest_meas['max_limit']})")
+                ref_text = format_measurement(ref_meas)
+                retest_text = format_measurement(retest_meas) if retest_meas else ''
                 
                 comparison_rows.append({
                     'Die Location': '',
