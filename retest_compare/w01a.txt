@@ -1,0 +1,741 @@
+
+STDFTool Output
+File: /common/archive/ft_data/mx91/v52241b_ws_rej/mx91_1-v52241b_ws_rej-c188686_105-w01a-250211-121831-1739272709-dlog0001.std.gz
+Mode: Datalog (Default Format)
+Test Flag Filter: fail
+Command: stdftool -D -Ffail
+
+******** TEST RESULTS PART 14 ********
+
+Part ID:   "14"   Bin:   2   Site:  1   XPos:    31   YPos:     1   Wafer:  1 
+
+  217 (SW2   (17 20)                              /SW2_V                         )         -0.014  V       <  F   > MIN :         -1.400 MAX :         -0.200
+  216 (SW1   (16 19)                              /SW1_HV                        )         -0.014  V       <  F   > MIN :         -1.400 MAX :         -0.200
+  111 (binning site 111                                                          )              2          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 30 ********
+
+Part ID:   "30"   Bin:   8   Site:  5   XPos:    35   YPos:     4   Wafer:  1 
+
+ 8546 (duty_cycle_diff                                                           )         -0.366          <  F   > MIN :          0.000 MAX :       1000.000
+ 8548 (dc_high_normalised                                                        )          2.688          <  F   > MIN :         15.100 MAX :         21.000
+  115 (binning site 115                                                          )              8          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 64 ********
+
+Part ID:   "64"   Bin:   8   Site:  5   XPos:    42   YPos:     7   Wafer:  1 
+
+ 8548 (dc_high_normalised                                                        )         12.426          <  F   > MIN :         15.100 MAX :         21.000
+  115 (binning site 115                                                          )              8          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 122 ********
+
+Part ID:  "122"   Bin:   8   Site:  4   XPos:    52   YPos:    18   Wafer:  1 
+
+ 8548 (dc_high_normalised                                                        )         14.319          <  F   > MIN :         15.100 MAX :         21.000
+  114 (binning site 114                                                          )              8          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 178 ********
+
+Part ID:  "178"   Bin:   4   Site:  1   XPos:    55   YPos:    31   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  111 (binning site 111                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 179 ********
+
+Part ID:  "179"   Bin:   4   Site:  2   XPos:    56   YPos:    31   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  112 (binning site 112                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 180 ********
+
+Part ID:  "180"   Bin:   4   Site:  3   XPos:    55   YPos:    32   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  113 (binning site 113                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 181 ********
+
+Part ID:  "181"   Bin:   4   Site:  4   XPos:    56   YPos:    32   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  114 (binning site 114                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 182 ********
+
+Part ID:  "182"   Bin:   4   Site:  5   XPos:    55   YPos:    33   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  115 (binning site 115                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 183 ********
+
+Part ID:  "183"   Bin:   4   Site:  6   XPos:    56   YPos:    33   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  116 (binning site 116                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 184 ********
+
+Part ID:  "184"   Bin:   3   Site:  8   XPos:    56   YPos:    34   Wafer:  1 
+
+ 3202 (vref_0                                                                    )          0.016  V       <  F   > MIN :          1.102 MAX :          1.398
+ 3203 (vref_1                                                                    )          0.017  V       <  F   > MIN :          1.102 MAX :          1.398
+ 3204 (vref_2                                                                    )          0.016  V       <  F   > MIN :          1.102 MAX :          1.398
+ 3205 (vref_3                                                                    )          0.016  V       <  F   > MIN :          1.102 MAX :          1.398
+ 3206 (vref_4                                                                    )          0.017  V       <  F   > MIN :          1.102 MAX :          1.398
+ 3207 (vref_5                                                                    )          0.017  V       <  F   > MIN :          1.102 MAX :          1.398
+ 3208 (vref_6                                                                    )          0.017  V       <  F   > MIN :          1.102 MAX :          1.398
+ 3209 (vref_7                                                                    )          0.016  V       <  F   > MIN :          1.102 MAX :          1.398
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+ 3100 (iref                                                                      )          8.796 uA       <  F   > MIN :          9.098 MAX :         10.972
+ 3201 (vref_vari                                                                 )          0.016  V       <  F   > MIN :          1.171 MAX :          1.239
+ 3000 (i_sleep                                                                   )        322.230 uA       <  F   > MIN :         11.770 MAX :         18.730
+ 8492 (bgdif_fail                                                                )          9.000          <  F   > MIN :         -0.100 MAX :          0.100
+ 6070 (f_osc50                                                                   )         30.080 MHz      <  F   > MIN :         47.310 MAX :         52.690
+ 3500 (v1                                                                        )        619.593 mV       <  F   > MIN :        635.000 MAX :        815.000
+ 3501 (v2                                                                        )        699.780 mV       <  F   > MIN :        725.000 MAX :        915.000
+ 3507 (T_shutoff                                                                 )        198.582  degree  <  F   > MIN :        156.750 MAX :        179.840
+ 3508 (T_recover                                                                 )        179.933  degree  <  F   > MIN :        136.610 MAX :        159.840
+ 8507 (i_err_p20mV                                                               )         94.134 uA       <  F   > MIN :          7.900 MAX :         57.070
+ 8508 (i_err_m20mV                                                               )         94.134 uA       <  F   > MIN :        -59.990 MAX :        -15.490
+ 8509 (gm                                                                        )          0.000 mS       <  F   > MIN :          1.300 MAX :          2.100
+ 8512 (i_err_source                                                              )         94.134 uA       <  F   > MIN :       -121.420 MAX :        -73.660
+ 8514 (i_err_0                                                                   )         94.150 uA       <  F   > MIN :        -50.000 MAX :         50.000
+ 8530 (vref_vari_0                                                               )          0.017  V       <  F   > MIN :          1.120 MAX :          1.280
+ 8531 (r_gain_100                                                                )         -2.637  mV/A    <  F   > MIN :         -0.125 MAX :         -0.090
+ 8532 (r_gain_150                                                                )         -2.687  mV/A    <  F   > MIN :         -0.185 MAX :         -0.120
+ 8533 (r_gain_200                                                                )         -2.737  mV/A    <  F   > MIN :         -0.245 MAX :         -0.160
+ 8534 (r_gain_250                                                                )         -2.787  mV/A    <  F   > MIN :         -0.305 MAX :         -0.200
+ 8535 (r_gain_300                                                                )         -2.836  mV/A    <  F   > MIN :         -0.365 MAX :         -0.240
+ 8536 (r_gain_350                                                                )         -2.887  mV/A    <  F   > MIN :         -0.425 MAX :         -0.280
+ 8537 (r_gain_400                                                                )         -2.936  mV/A    <  F   > MIN :         -0.485 MAX :         -0.320
+ 8541 (i_ctrl_low                                                                )         -8.899 uA       <  F   > MIN :         -8.400 MAX :         -1.600
+ 8544 (duty_cycle_high                                                           ) 19999999696486          <  F   > MIN :          0.000 MAX :       1000.000
+ 8545 (duty_cycle_low                                                            ) 19999999696486          <  F   > MIN :          0.000 MAX :       1000.000
+ 8548 (dc_high_normalised                                                        ) -5849588550033          <  F   > MIN :         15.100 MAX :         21.000
+ 8547 (dc_low_normalised                                                         ) -5849588550033          <  F   > MIN :          8.500 MAX :         14.800
+ 4010 (mf4ms_fail                                                                )        163.000          <  F   > MIN :         -0.500 MAX :          0.500
+ 8705 (v_pwm_cmp_off_gonogo                                                      )          0.000          <  F   > MIN :          0.900 MAX :          1.100
+ 8704 (v_pwm_cmp_on_gonogo                                                       )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+ 8702 (v_lx_on                                                                   )          3.278  V       <  F   > MIN :         11.500 MAX :         12.500
+ 8703 (v_lx_off                                                                  )          0.154  V       <  F   > MIN :          2.000 MAX :          3.800
+ 8620 (vth_curreg                                                                )       7354.256 mV       <  F   > MIN :       -120.000 MAX :        120.000
+ 8621 (vth_curlim                                                                )       6845.190 mV       <  F   > MIN :       -120.000 MAX :        120.000
+ 8622 (vth_curreg_r                                                              )          8.889  V       <  F   > MIN :          1.350 MAX :          1.650
+ 8623 (vth_curreg_f                                                              )          8.889  V       <  F   > MIN :          1.350 MAX :          1.650
+ 8624 (vth_curlim_r                                                              )          8.889  V       <  F   > MIN :          1.800 MAX :          2.200
+ 8625 (vth_curlim_f                                                              )          8.889  V       <  F   > MIN :          1.800 MAX :          2.200
+ 8558 (gain_6v                                                                   )         -0.277          <  F   > MIN :          9.150 MAX :         10.800
+ 8560 (gain_5v                                                                   )         -0.289          <  F   > MIN :          9.150 MAX :         10.500
+ 8563 (v_cs_mid                                                                  )          0.057  V       <  F   > MIN :          1.430 MAX :          1.700
+ 8830 (v_lsd                                                                     )          8.889  V       <  F   > MIN :          2.410 MAX :          2.600
+ 8832 (v_fsd                                                                     )          8.889  V       <  F   > MIN :          2.410 MAX :          2.590
+ 8831 (v_hys_lsd                                                                 )          0.000 mV       <  F   > MIN :         50.000 MAX :        165.800
+ 8833 (v_hys_fsd                                                                 )          0.000 mV       <  F   > MIN :         62.800 MAX :        176.500
+ 8860 (rdwn_pdp                                                                  )     -23647.830 KOhm     <  F   > MIN :         14.300 MAX :         15.700
+ 8861 (rdwn_pdm                                                                  )     -42992.020 KOhm     <  F   > MIN :         14.300 MAX :         15.700
+ 8862 (v_source_on                                                               )        888.889 mV       <  F   > MIN :        323.200 MAX :        399.000
+ 8863 (v_source_on_hys                                                           )          0.000 mV       <  F   > MIN :         63.900 MAX :        142.300
+ 8864 (v_source_off                                                              )         -8.889  V       <  F   > MIN :          0.960 MAX :          1.052
+ 8865 (v_source_off_hys                                                          )          0.000 mV       <  F   > MIN :         63.900 MAX :        142.300
+ 8915 (thres_lowadd_GoNoGo                                                       )          2.000          <  F   > MIN :          0.900 MAX :          1.100
+ 8910 (thres_lowadd                                                              )          2.706  V       <  F   > MIN :          0.230 MAX :          0.280
+ 8916 (thres_highadd_GoNoGo                                                      )          2.000          <  F   > MIN :          0.900 MAX :          1.100
+ 8911 (thres_highadd                                                             )          2.706  V       <  F   > MIN :          0.730 MAX :          0.780
+ 8920 (vih_sda_ratio                                                             )          2.706  V       <  F   > MIN :          0.570 MAX :          0.690
+ 8921 (vil_sda_ratio                                                             )          2.706  V       <  F   > MIN :          0.310 MAX :          0.440
+ 8922 (vhys_sda                                                                  )          0.000  V       <  F   > MIN :          0.740 MAX :          1.110
+ 8914 (v_CFG3_15                                                                 )         11.543 mV       <  F   > MIN :        930.000 MAX :        995.000
+ 8924 (v_CFG2_15                                                                 )         66.423 mV       <  F   > MIN :        930.000 MAX :        995.000
+ 8925 (v_CFG2_8                                                                  )         38.239 mV       <  F   > MIN :        515.000 MAX :        549.000
+ 8927 (v_CFG2_4                                                                  )         20.822 mV       <  F   > MIN :        260.000 MAX :        300.000
+ 8928 (v_CFG2_2                                                                  )         12.833 mV       <  F   > MIN :        140.000 MAX :        180.000
+ 8929 (v_CFG2_1                                                                  )          9.359 mV       <  F   > MIN :         70.000 MAX :        110.000
+ 8934 (v_CFG1_15                                                                 )         10.798 mV       <  F   > MIN :        930.000 MAX :        995.000
+ 8935 (v_CFG1_8                                                                  )          9.756 mV       <  F   > MIN :        515.000 MAX :        549.000
+ 8937 (v_CFG1_4                                                                  )          9.508 mV       <  F   > MIN :        260.000 MAX :        300.000
+ 8938 (v_CFG1_2                                                                  )          9.806 mV       <  F   > MIN :        140.000 MAX :        180.000
+ 8939 (v_CFG1_1                                                                  )          9.905 mV       <  F   > MIN :         70.000 MAX :        110.000
+20918 ((L4ADC)Missing codes static                                               )        254.000          <  F   > MIN :          0.000 MAX :          1.000
+20920 ((L4ADC)Ideal offset error static                                          )     -78184.531  LSB     <  F   > MIN :        -10.000 MAX :         10.000
+20921 ((L4ADC)Ideal gain error static                                            )        255.000  LSB     <  F   > MIN :        -10.000 MAX :         10.000
+20922 ((L4ADC)Ideal min Total Err static                                         )        999.990  LSB     <  F   > MIN :        -10.000 MAX :         10.000
+20923 ((L4ADC)Ideal max Total Err static                                         )       -999.990  LSB     <  F   > MIN :        -10.000 MAX :         10.000
+  118 (binning site 118                                                          )              3          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 198 ********
+
+Part ID:  "198"   Bin:   8   Site:  5   XPos:    51   YPos:    31   Wafer:  1 
+
+ 8548 (dc_high_normalised                                                        )         12.707          <  F   > MIN :         15.100 MAX :         21.000
+  115 (binning site 115                                                          )              8          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 227 ********
+
+Part ID:  "227"   Bin:   4   Site:  3   XPos:    43   YPos:    30   Wafer:  1 
+
+ 4021 (ss_fail_05down                                                            )          1.000          <  F   > MIN :         -0.500 MAX :          0.500
+  113 (binning site 113                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 324 ********
+
+Part ID:  "324"   Bin:   4   Site:  1   XPos:    44   YPos:    37   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  111 (binning site 111                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 325 ********
+
+Part ID:  "325"   Bin:   4   Site:  2   XPos:    45   YPos:    37   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  112 (binning site 112                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 326 ********
+
+Part ID:  "326"   Bin:   4   Site:  3   XPos:    44   YPos:    38   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  113 (binning site 113                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 327 ********
+
+Part ID:  "327"   Bin:   8   Site:  4   XPos:    45   YPos:    38   Wafer:  1 
+
+18006 ((L4OTP)Iread leakage                                                      )         10.082 uA       <  F   > MIN :         -5.000 MAX :         10.000
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  114 (binning site 114                                                          )              8          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 328 ********
+
+Part ID:  "328"   Bin:   4   Site:  5   XPos:    44   YPos:    39   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  115 (binning site 115                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 329 ********
+
+Part ID:  "329"   Bin:   4   Site:  6   XPos:    45   YPos:    39   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  116 (binning site 116                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 330 ********
+
+Part ID:  "330"   Bin:   4   Site:  7   XPos:    44   YPos:    40   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  117 (binning site 117                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 331 ********
+
+Part ID:  "331"   Bin:   4   Site:  8   XPos:    45   YPos:    40   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  118 (binning site 118                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 436 ********
+
+Part ID:  "436"   Bin:   8   Site:  1   XPos:    40   YPos:    49   Wafer:  1 
+
+ 8548 (dc_high_normalised                                                        )         14.475          <  F   > MIN :         15.100 MAX :         21.000
+  111 (binning site 111                                                          )              8          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 494 ********
+
+Part ID:  "494"   Bin:   8   Site:  7   XPos:    30   YPos:    54   Wafer:  1 
+
+ 8111 (SMPS_DS_PreLeakage                                                        )        -50.370 uA       <  F   > MIN :         -0.750 MAX :          0.750
+ 8112 (SMPS_DS_PostLeakage                                                       )        -50.373 uA       <  F   > MIN :         -0.750 MAX :          0.750
+ 8703 (v_lx_off                                                                  )         11.489  V       <  F   > MIN :          2.000 MAX :          3.800
+  117 (binning site 117                                                          )              8          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 696 ********
+
+Part ID:  "696"   Bin:   2   Site:  7   XPos:    28   YPos:    44   Wafer:  1 
+
+  214 (LX1   (14 17)                              /LX1_HV                        )          0.041  V       <  F   > MIN :          0.200 MAX :          1.400
+  215 (LX2   (15 18)                              /LX2_V                         )          0.041  V       <  F   > MIN :          0.200 MAX :          1.400
+  117 (binning site 117                                                          )              2          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 819 ********
+
+Part ID:  "819"   Bin:   4   Site:  6   XPos:    40   YPos:    31   Wafer:  1 
+
+ 4000 (scan_fail_vec                                                             )         19.000          <  F   > MIN :         -0.500 MAX :          0.500
+ 4002 (trans_fail_vec                                                            )         29.000          <  F   > MIN :         -0.500 MAX :          0.500
+  116 (binning site 116                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 825 ********
+
+Part ID:  "825"   Bin:   4   Site:  4   XPos:    42   YPos:    30   Wafer:  1 
+
+ 4000 (scan_fail_vec                                                             )      23850.000          <  F   > MIN :         -0.500 MAX :          0.500
+ 4002 (trans_fail_vec                                                            )      43592.000          <  F   > MIN :         -0.500 MAX :          0.500
+ 4004 (fail_vec_iddq_pre                                                         )       4911.000          <  F   > MIN :         -0.500 MAX :          0.500
+ 4009 (fail_vec_iddq_post                                                        )       4911.000          <  F   > MIN :         -0.500 MAX :          0.500
+ 4012 (fail_vec_iddq_stress                                                      )       2408.000          <  F   > MIN :         -0.500 MAX :          0.500
+  114 (binning site 114                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 1370 ********
+
+Part ID: "1370"   Bin:   8   Site:  5   XPos:    25   YPos:    23   Wafer:  1 
+
+ 8490 (v_1v15                                                                    )         -0.004  V       <  F   > MIN :          1.113 MAX :          1.202
+ 8492 (bgdif_fail                                                                )          2.000          <  F   > MIN :         -0.100 MAX :          0.100
+  115 (binning site 115                                                          )              8          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 1438 ********
+
+Part ID: "1438"   Bin:   8   Site:  6   XPos:     8   YPos:    23   Wafer:  1 
+
+ 8334 (vref_vari_250                                                             )          1.207  V       <  F   > MIN :          1.250 MAX :          1.400
+ 8335 (vref_vari_300                                                             )          1.207  V       <  F   > MIN :          1.280 MAX :          1.450
+ 8336 (vref_vari_350                                                             )          1.207  V       <  F   > MIN :          1.300 MAX :          1.450
+ 8337 (vref_vari_400                                                             )          1.207  V       <  F   > MIN :          1.320 MAX :          1.480
+ 8531 (r_gain_100                                                                )         -0.009  mV/A    <  F   > MIN :         -0.125 MAX :         -0.090
+ 8532 (r_gain_150                                                                )         -0.009  mV/A    <  F   > MIN :         -0.185 MAX :         -0.120
+ 8533 (r_gain_200                                                                )         -0.009  mV/A    <  F   > MIN :         -0.245 MAX :         -0.160
+ 8534 (r_gain_250                                                                )         -0.009  mV/A    <  F   > MIN :         -0.305 MAX :         -0.200
+ 8535 (r_gain_300                                                                )         -0.009  mV/A    <  F   > MIN :         -0.365 MAX :         -0.240
+ 8536 (r_gain_350                                                                )         -0.009  mV/A    <  F   > MIN :         -0.425 MAX :         -0.280
+ 8537 (r_gain_400                                                                )         -0.009  mV/A    <  F   > MIN :         -0.485 MAX :         -0.320
+ 8540 (v_nrp_lim                                                                 )          5.028  V       <  F   > MIN :          5.850 MAX :          6.170
+ 8538 (r_gain_monotonie                                                          )         63.000          <  F   > MIN :         -0.100 MAX :          0.100
+  116 (binning site 116                                                          )              8          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 1458 ********
+
+Part ID: "1458"   Bin:   8   Site:  7   XPos:     7   YPos:    28   Wafer:  1 
+
+ 8532 (r_gain_150                                                                )         -0.208  mV/A    <  F   > MIN :         -0.185 MAX :         -0.120
+ 8534 (r_gain_250                                                                )         -0.308  mV/A    <  F   > MIN :         -0.305 MAX :         -0.200
+ 8538 (r_gain_monotonie                                                          )         10.000          <  F   > MIN :         -0.100 MAX :          0.100
+  117 (binning site 117                                                          )              8          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 1503 ********
+
+Part ID: "1503"   Bin:   4   Site:  6   XPos:    20   YPos:    27   Wafer:  1 
+
+ 4000 (scan_fail_vec                                                             )         29.000          <  F   > MIN :         -0.500 MAX :          0.500
+ 4002 (trans_fail_vec                                                            )        428.000          <  F   > MIN :         -0.500 MAX :          0.500
+  116 (binning site 116                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 1505 ********
+
+Part ID: "1505"   Bin:   4   Site:  8   XPos:    20   YPos:    28   Wafer:  1 
+
+ 4000 (scan_fail_vec                                                             )        123.000          <  F   > MIN :         -0.500 MAX :          0.500
+ 4002 (trans_fail_vec                                                            )        509.000          <  F   > MIN :         -0.500 MAX :          0.500
+  118 (binning site 118                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 1600 ********
+
+Part ID: "1600"   Bin:   8   Site:  5   XPos:    24   YPos:    39   Wafer:  1 
+
+ 8862 (v_source_on                                                               )        888.889 mV       <  F   > MIN :        323.200 MAX :        399.000
+ 8863 (v_source_on_hys                                                           )          0.000 mV       <  F   > MIN :         63.900 MAX :        142.300
+ 8864 (v_source_off                                                              )         -8.889  V       <  F   > MIN :          0.960 MAX :          1.052
+ 8865 (v_source_off_hys                                                          )          0.000 mV       <  F   > MIN :         63.900 MAX :        142.300
+ 8866 (v_source_pdm                                                              )          0.241  V       <  F   > MIN :          0.592 MAX :          0.690
+  115 (binning site 115                                                          )              8          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 1603 ********
+
+Part ID: "1603"   Bin:   4   Site:  8   XPos:    25   YPos:    40   Wafer:  1 
+
+ 4000 (scan_fail_vec                                                             )      25734.000          <  F   > MIN :         -0.500 MAX :          0.500
+ 4002 (trans_fail_vec                                                            )      55048.000          <  F   > MIN :         -0.500 MAX :          0.500
+ 4004 (fail_vec_iddq_pre                                                         )       4927.000          <  F   > MIN :         -0.500 MAX :          0.500
+ 4009 (fail_vec_iddq_post                                                        )       4927.000          <  F   > MIN :         -0.500 MAX :          0.500
+ 4012 (fail_vec_iddq_stress                                                      )       2408.000          <  F   > MIN :         -0.500 MAX :          0.500
+  118 (binning site 118                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 1680 ********
+
+Part ID: "1680"   Bin:   3   Site:  8   XPos:     9   YPos:    44   Wafer:  1 
+
+ 3001 (i_stb                                                                     )         11.120 mA       <  F   > MIN :          1.147 MAX :          6.273
+ 8111 (SMPS_DS_PreLeakage                                                        )        -50.384 uA       <  F   > MIN :         -0.750 MAX :          0.750
+ 8113 (BUS_Discharge_PreLeakag                                                   )        -50.357 uA       <  F   > MIN :        -10.000 MAX :         10.000
+ 8872 (v_dm1_pdp                                                                 )          2.540  V       <  F   > MIN :          0.090 MAX :          0.200
+ 8873 (v_dm1_pdm                                                                 )          1.939  V       <  F   > MIN :          0.090 MAX :          0.200
+ 8874 (v_dm2_pdp                                                                 )          2.742  V       <  F   > MIN :          0.180 MAX :          0.325
+ 8875 (v_dm2_pdm                                                                 )          1.939  V       <  F   > MIN :          0.180 MAX :          0.325
+ 8876 (v_dm4_pdp                                                                 )          2.943  V       <  F   > MIN :          0.360 MAX :          0.500
+ 8877 (v_dm4_pdm                                                                 )          2.342  V       <  F   > MIN :          0.360 MAX :          0.500
+ 8878 (v_dm8_pdp                                                                 )          2.542  V       <  F   > MIN :          0.720 MAX :          1.000
+ 8879 (v_dm8_pdm                                                                 )          2.743  V       <  F   > MIN :          0.720 MAX :          1.000
+ 8880 (v_dm16_pdp                                                                )          2.541  V       <  F   > MIN :          1.440 MAX :          2.000
+ 8884 (v_dm_delta_pdp                                                            )        202.297 mV       <  F   > MIN :         96.300 MAX :        108.200
+ 8885 (v_dm_delta_pdm                                                            )         -0.163 mV       <  F   > MIN :         96.300 MAX :        108.200
+ 8886 (r_dm15k_pdp                                                               )         26.623 KOhm     <  F   > MIN :         12.150 MAX :         17.850
+ 8887 (r_dm15k_pdm                                                               )         31.578 KOhm     <  F   > MIN :         12.150 MAX :         17.850
+ 8889 (r_dm5k_pdm                                                                )         -0.015 KOhm     <  F   > MIN :          4.040 MAX :          7.000
+ 8890 (r_dm10k_pdp                                                               )         -0.007 KOhm     <  F   > MIN :          8.000 MAX :         14.000
+ 8891 (r_dm10k_pdm                                                               )          0.005 KOhm     <  F   > MIN :          8.000 MAX :         14.000
+ 8896 (r_dm_delta_pdp                                                            )         -5.072 KOhm     <  F   > MIN :          4.100 MAX :          6.900
+ 8897 (r_dm_delta_pdm                                                            )          0.021 KOhm     <  F   > MIN :          4.100 MAX :          6.900
+ 4000 (scan_fail_vec                                                             )      15653.000          <  F   > MIN :         -0.500 MAX :          0.500
+ 4002 (trans_fail_vec                                                            )      30889.000          <  F   > MIN :         -0.500 MAX :          0.500
+ 4004 (fail_vec_iddq_pre                                                         )       4927.000          <  F   > MIN :         -0.500 MAX :          0.500
+ 4009 (fail_vec_iddq_post                                                        )       4927.000          <  F   > MIN :         -0.500 MAX :          0.500
+ 4012 (fail_vec_iddq_stress                                                      )       2408.000          <  F   > MIN :         -0.500 MAX :          0.500
+  118 (binning site 118                                                          )              3          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 1710 ********
+
+Part ID: "1710"   Bin:   8   Site:  7   XPos:    14   YPos:    40   Wafer:  1 
+
+ 8111 (SMPS_DS_PreLeakage                                                        )        -50.375 uA       <  F   > MIN :         -0.750 MAX :          0.750
+ 8112 (SMPS_DS_PostLeakage                                                       )        -50.373 uA       <  F   > MIN :         -0.750 MAX :          0.750
+ 8113 (BUS_Discharge_PreLeakag                                                   )        -10.585 uA       <  F   > MIN :        -10.000 MAX :         10.000
+ 8114 (BUS_Discharge_PostLeakage                                                 )        -11.024 uA       <  F   > MIN :        -10.000 MAX :         10.000
+ 8102 (SMPS_Gate_PreLeakage                                                      )       -505.064 uA       <  F   > MIN :       -130.000 MAX :        -70.000
+ 8105 (SMPS_Gate_StressLeakage                                                   )       -505.191 uA       <  F   > MIN :       -190.000 MAX :       -120.000
+ 8108 (SMPS_Gate_PostLeakage                                                     )       -504.936 uA       <  F   > MIN :       -130.000 MAX :        -70.000
+ 8703 (v_lx_off                                                                  )         11.313  V       <  F   > MIN :          2.000 MAX :          3.800
+  117 (binning site 117                                                          )              8          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 1747 ********
+
+Part ID: "1747"   Bin:   6   Site:  7   XPos:     5   YPos:    39   Wafer:  1 
+
+ 6170 (f_smps_spc                                                                )         63.000 KHz      <  F   > MIN :         22.000 MAX :         53.600
+  117 (binning site 117                                                          )              6          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 1758 ********
+
+Part ID: "1758"   Bin:   8   Site:  7   XPos:     6   YPos:    36   Wafer:  1 
+
+ 8111 (SMPS_DS_PreLeakage                                                        )        -50.375 uA       <  F   > MIN :         -0.750 MAX :          0.750
+ 8112 (SMPS_DS_PostLeakage                                                       )        -50.366 uA       <  F   > MIN :         -0.750 MAX :          0.750
+ 8703 (v_lx_off                                                                  )         11.252  V       <  F   > MIN :          2.000 MAX :          3.800
+  117 (binning site 117                                                          )              8          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 1941 ********
+
+Part ID: "1941"   Bin:   4   Site:  5   XPos:    15   YPos:    19   Wafer:  1 
+
+ 4000 (scan_fail_vec                                                             )      25740.000          <  F   > MIN :         -0.500 MAX :          0.500
+ 4002 (trans_fail_vec                                                            )      51369.000          <  F   > MIN :         -0.500 MAX :          0.500
+ 4004 (fail_vec_iddq_pre                                                         )       5063.000          <  F   > MIN :         -0.500 MAX :          0.500
+ 4009 (fail_vec_iddq_post                                                        )       5063.000          <  F   > MIN :         -0.500 MAX :          0.500
+ 4012 (fail_vec_iddq_stress                                                      )       2587.000          <  F   > MIN :         -0.500 MAX :          0.500
+  115 (binning site 115                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 1943 ********
+
+Part ID: "1943"   Bin:   8   Site:  7   XPos:    15   YPos:    20   Wafer:  1 
+
+ 8547 (dc_low_normalised                                                         )          8.260          <  F   > MIN :          8.500 MAX :         14.800
+  117 (binning site 117                                                          )              8          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 1945 ********
+
+Part ID: "1945"   Bin:   4   Site:  1   XPos:    17   YPos:    17   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  111 (binning site 111                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 1946 ********
+
+Part ID: "1946"   Bin:   4   Site:  2   XPos:    18   YPos:    17   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  112 (binning site 112                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 1947 ********
+
+Part ID: "1947"   Bin:   4   Site:  3   XPos:    17   YPos:    18   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  113 (binning site 113                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 1948 ********
+
+Part ID: "1948"   Bin:   3   Site:  4   XPos:    18   YPos:    18   Wafer:  1 
+
+ 3202 (vref_0                                                                    )          0.483  V       <  F   > MIN :          1.102 MAX :          1.398
+ 6100 (f_smps_0                                                                  )          0.200 MHz      <  F   > MIN :          0.500 MAX :          2.000
+ 6101 (f_smps_1                                                                  )          0.200 MHz      <  F   > MIN :          0.500 MAX :          2.000
+ 6102 (f_smps_2                                                                  )          0.200 MHz      <  F   > MIN :          0.500 MAX :          2.000
+ 6103 (f_smps_3                                                                  )          0.200 MHz      <  F   > MIN :          0.500 MAX :          2.000
+ 6104 (f_smps_4                                                                  )          0.200 MHz      <  F   > MIN :          0.500 MAX :          2.000
+ 6105 (f_smps_5                                                                  )          0.200 MHz      <  F   > MIN :          0.500 MAX :          2.000
+ 6106 (f_smps_6                                                                  )          0.200 MHz      <  F   > MIN :          0.500 MAX :          2.000
+ 6107 (f_smps_7                                                                  )          0.200 MHz      <  F   > MIN :          0.500 MAX :          2.000
+ 6108 (f_smps_8                                                                  )          0.200 MHz      <  F   > MIN :          0.500 MAX :          2.000
+ 6109 (f_smps_9                                                                  )          0.200 MHz      <  F   > MIN :          0.500 MAX :          2.000
+ 6110 (f_smps_10                                                                 )          0.200 MHz      <  F   > MIN :          0.500 MAX :          2.000
+ 6111 (f_smps_11                                                                 )          0.200 MHz      <  F   > MIN :          0.500 MAX :          2.000
+ 6112 (f_smps_12                                                                 )          0.200 MHz      <  F   > MIN :          0.500 MAX :          2.000
+ 6113 (f_smps_13                                                                 )          0.200 MHz      <  F   > MIN :          0.500 MAX :          2.000
+ 6114 (f_smps_14                                                                 )          0.220 MHz      <  F   > MIN :          0.500 MAX :          2.000
+ 6115 (f_smps_15                                                                 )          0.200 MHz      <  F   > MIN :          0.500 MAX :          2.000
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+ 3201 (vref_vari                                                                 )          0.523  V       <  F   > MIN :          1.171 MAX :          1.239
+ 6155 (f_smps_2M                                                                 )          0.402 MHz      <  F   > MIN :          1.813 MAX :          2.187
+ 6156 (f_smps_1M                                                                 )          0.202 MHz      <  F   > MIN :          0.906 MAX :          1.094
+ 6157 (f_smps_05M                                                                )          0.100 MHz      <  F   > MIN :          0.453 MAX :          0.547
+ 6158 (f_smps_025M                                                               )          0.050 MHz      <  F   > MIN :          0.226 MAX :          0.274
+ 6160 (f_sync                                                                    )          7.000          <  F   > MIN :         -0.100 MAX :          0.100
+ 6161 (v_vco_inp                                                                 )          3.222  V       <  F   > MIN :          1.417 MAX :          1.878
+ 6171 (f_smps_spc_mindiff                                                        )         -5.105 KHz      <  F   > MIN :       -160.000 MAX :        -20.000
+ 6172 (f_smps_spc_maxdiff                                                        )          5.272 KHz      <  F   > MIN :         20.000 MAX :        160.000
+ 6173 (f_smps_spc_min                                                            )          0.396 MHz      <  F   > MIN :          1.800 MAX :          2.200
+ 6174 (f_smps_spc_max                                                            )          0.406 MHz      <  F   > MIN :          1.800 MAX :          2.200
+ 6175 (f_smps_spc_mid                                                            )          0.401 MHz      <  F   > MIN :          1.900 MAX :          2.100
+ 8548 (dc_high_normalised                                                        )          3.328          <  F   > MIN :         15.100 MAX :         21.000
+ 8547 (dc_low_normalised                                                         )          1.966          <  F   > MIN :          8.500 MAX :         14.800
+  114 (binning site 114                                                          )              3          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 1949 ********
+
+Part ID: "1949"   Bin:   4   Site:  5   XPos:    17   YPos:    19   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  115 (binning site 115                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 1950 ********
+
+Part ID: "1950"   Bin:   4   Site:  6   XPos:    18   YPos:    19   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  116 (binning site 116                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 1951 ********
+
+Part ID: "1951"   Bin:   4   Site:  7   XPos:    17   YPos:    20   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  117 (binning site 117                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 1952 ********
+
+Part ID: "1952"   Bin:   4   Site:  8   XPos:    18   YPos:    20   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  118 (binning site 118                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 1968 ********
+
+Part ID: "1968"   Bin:   8   Site:  8   XPos:    16   YPos:    16   Wafer:  1 
+
+ 8435 (v_sw_ov_GoNoGo                                                            )          0.000          <  F   > MIN :          0.900 MAX :          1.100
+ 9432 (v_sw_ov_serial                                                            )         32.118  V       <  F   > MIN :         32.140 MAX :         34.950
+ 8432 (v_sw_ov                                                                   )         32.109  V       <  F   > MIN :         32.140 MAX :         34.950
+  118 (binning site 118                                                          )              8          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 2141 ********
+
+Part ID: "2141"   Bin:   8   Site:  4   XPos:    33   YPos:     6   Wafer:  1 
+
+ 8517 (v_busov_GoNoGo                                                            )          2.000          <  F   > MIN :          0.900 MAX :          1.100
+ 8526 (v_busov                                                                   )          1.778  V       <  F   > MIN :          1.044 MAX :          1.119
+ 8519 (v_busmax_GoNoGo                                                           )          2.000          <  F   > MIN :          0.900 MAX :          1.100
+ 8528 (v_busmax                                                                  )          8.889  V       <  F   > MIN :          6.300 MAX :          6.700
+ 8620 (vth_curreg                                                                )       7377.797 mV       <  F   > MIN :       -120.000 MAX :        120.000
+ 8621 (vth_curlim                                                                )       6875.159 mV       <  F   > MIN :       -120.000 MAX :        120.000
+ 8622 (vth_curreg_r                                                              )          8.889  V       <  F   > MIN :          1.350 MAX :          1.650
+ 8623 (vth_curreg_f                                                              )          8.889  V       <  F   > MIN :          1.350 MAX :          1.650
+ 8624 (vth_curlim_r                                                              )          8.889  V       <  F   > MIN :          1.800 MAX :          2.200
+ 8625 (vth_curlim_f                                                              )          8.889  V       <  F   > MIN :          1.800 MAX :          2.200
+  114 (binning site 114                                                          )              8          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 2162 ********
+
+Part ID: "2162"   Bin:   4   Site:  3   XPos:    26   YPos:     6   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  113 (binning site 113                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 2163 ********
+
+Part ID: "2163"   Bin:   3   Site:  4   XPos:    27   YPos:     6   Wafer:  1 
+
+ 3101 (iref_0                                                                    )          0.026 uA       <  F   > MIN :          1.200 MAX :         19.800
+ 3102 (iref_1                                                                    )          0.026 uA       <  F   > MIN :          1.200 MAX :         19.800
+ 3103 (iref_2                                                                    )          0.024 uA       <  F   > MIN :          1.200 MAX :         19.800
+ 3104 (iref_3                                                                    )          0.033 uA       <  F   > MIN :          1.200 MAX :         19.800
+ 3105 (iref_4                                                                    )          0.036 uA       <  F   > MIN :          1.200 MAX :         19.800
+ 3106 (iref_5                                                                    )          0.029 uA       <  F   > MIN :          1.200 MAX :         19.800
+ 3107 (iref_6                                                                    )          0.026 uA       <  F   > MIN :          1.200 MAX :         19.800
+ 3108 (iref_7                                                                    )          0.041 uA       <  F   > MIN :          1.200 MAX :         19.800
+ 3109 (iref_8                                                                    )          0.037 uA       <  F   > MIN :          1.200 MAX :         19.800
+ 3110 (iref_9                                                                    )          0.033 uA       <  F   > MIN :          1.200 MAX :         19.800
+ 3111 (iref_10                                                                   )          0.034 uA       <  F   > MIN :          1.200 MAX :         19.800
+ 3112 (iref_11                                                                   )          0.026 uA       <  F   > MIN :          1.200 MAX :         19.800
+ 3113 (iref_12                                                                   )          0.031 uA       <  F   > MIN :          1.200 MAX :         19.800
+ 3114 (iref_13                                                                   )          0.028 uA       <  F   > MIN :          1.200 MAX :         19.800
+ 3115 (iref_14                                                                   )          0.020 uA       <  F   > MIN :          1.200 MAX :         19.800
+ 3116 (iref_15                                                                   )          0.028 uA       <  F   > MIN :          1.200 MAX :         19.800
+ 3202 (vref_0                                                                    )          0.074  V       <  F   > MIN :          1.102 MAX :          1.398
+ 3203 (vref_1                                                                    )          0.081  V       <  F   > MIN :          1.102 MAX :          1.398
+ 3204 (vref_2                                                                    )          0.087  V       <  F   > MIN :          1.102 MAX :          1.398
+ 3205 (vref_3                                                                    )          0.092  V       <  F   > MIN :          1.102 MAX :          1.398
+ 3206 (vref_4                                                                    )          0.096  V       <  F   > MIN :          1.102 MAX :          1.398
+ 3207 (vref_5                                                                    )          0.099  V       <  F   > MIN :          1.102 MAX :          1.398
+ 3208 (vref_6                                                                    )          0.102  V       <  F   > MIN :          1.102 MAX :          1.398
+ 3209 (vref_7                                                                    )          0.104  V       <  F   > MIN :          1.102 MAX :          1.398
+ 3241 (i_OTA_0                                                                   )       -166.563 uA       <  F   > MIN :       -100.000 MAX :        100.000
+ 3242 (i_OTA_1                                                                   )       -166.627 uA       <  F   > MIN :       -100.000 MAX :        100.000
+ 3243 (i_OTA_2                                                                   )       -166.644 uA       <  F   > MIN :       -100.000 MAX :        100.000
+ 3244 (i_OTA_3                                                                   )       -166.644 uA       <  F   > MIN :       -100.000 MAX :        100.000
+ 3245 (i_OTA_4                                                                   )       -166.724 uA       <  F   > MIN :       -100.000 MAX :        100.000
+ 3246 (i_OTA_5                                                                   )       -166.708 uA       <  F   > MIN :       -100.000 MAX :        100.000
+ 3247 (i_OTA_6                                                                   )       -166.627 uA       <  F   > MIN :       -100.000 MAX :        100.000
+ 3248 (i_OTA_7                                                                   )       -166.692 uA       <  F   > MIN :       -100.000 MAX :        100.000
+ 3240 (Vfbdi                                                                     )          0.079  V       <  F   > MIN :          1.100 MAX :          1.300
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+ 3100 (iref                                                                      )          0.036 uA       <  F   > MIN :          9.098 MAX :         10.972
+ 3125 (i_ptat                                                                    )          0.029 uA       <  F   > MIN :          4.153 MAX :          7.164
+ 3201 (vref_vari                                                                 )          2.443  V       <  F   > MIN :          1.171 MAX :          1.239
+ 3301 (v_bg1                                                                     )          2.401  V       <  F   > MIN :          1.242 MAX :          1.350
+ 3311 (v_bg2                                                                     )          2.417  V       <  F   > MIN :          1.200 MAX :          1.400
+ 3321 (vfbdi                                                                     )          2.387  V       <  F   > MIN :          1.100 MAX :          1.400
+ 3030 (v_sleep                                                                   )          0.148  V       <  F   > MIN :          6.000 MAX :          6.686
+ 3031 (v_sleep_meas                                                              )          0.037  V       <  F   > MIN :          1.500 MAX :          1.672
+ 8491 (v_1v35                                                                    )          1.168  V       <  F   > MIN :          1.286 MAX :          1.414
+ 8492 (bgdif_fail                                                                )         12.000          <  F   > MIN :         -0.100 MAX :          0.100
+ 8517 (v_busov_GoNoGo                                                            )          2.000          <  F   > MIN :          0.900 MAX :          1.100
+ 8526 (v_busov                                                                   )          1.120  V       <  F   > MIN :          1.044 MAX :          1.119
+ 8519 (v_busmax_GoNoGo                                                           )          2.000          <  F   > MIN :          0.900 MAX :          1.100
+ 8528 (v_busmax                                                                  )          6.728  V       <  F   > MIN :          6.300 MAX :          6.700
+ 8507 (i_err_p20mV                                                               )       -166.676 uA       <  F   > MIN :          7.900 MAX :         57.070
+ 8508 (i_err_m20mV                                                               )       -166.692 uA       <  F   > MIN :        -59.990 MAX :        -15.490
+ 8509 (gm                                                                        )          0.000 mS       <  F   > MIN :          1.300 MAX :          2.100
+ 8511 (i_err_sink                                                                )       -166.692 uA       <  F   > MIN :         72.900 MAX :        121.440
+ 8512 (i_err_source                                                              )       -166.692 uA       <  F   > MIN :       -121.420 MAX :        -73.660
+ 8514 (i_err_0                                                                   )       -166.660 uA       <  F   > MIN :        -50.000 MAX :         50.000
+ 8515 (vin_offset                                                                )    -413381.561 mV       <  F   > MIN :        -13.780 MAX :         10.030
+ 8530 (vref_vari_0                                                               )          1.532  V       <  F   > MIN :          1.120 MAX :          1.280
+ 8331 (vref_vari_100                                                             )          1.536  V       <  F   > MIN :          1.100 MAX :          1.400
+ 8332 (vref_vari_150                                                             )          1.509  V       <  F   > MIN :          1.150 MAX :          1.400
+ 8333 (vref_vari_200                                                             )          1.486  V       <  F   > MIN :          1.200 MAX :          1.400
+ 8334 (vref_vari_250                                                             )          1.465  V       <  F   > MIN :          1.250 MAX :          1.400
+ 8531 (r_gain_100                                                                )         -0.008  mV/A    <  F   > MIN :         -0.125 MAX :         -0.090
+ 8532 (r_gain_150                                                                )          0.048  mV/A    <  F   > MIN :         -0.185 MAX :         -0.120
+ 8533 (r_gain_200                                                                )          0.096  mV/A    <  F   > MIN :         -0.245 MAX :         -0.160
+ 8534 (r_gain_250                                                                )          0.138  mV/A    <  F   > MIN :         -0.305 MAX :         -0.200
+ 8535 (r_gain_300                                                                )          0.181  mV/A    <  F   > MIN :         -0.365 MAX :         -0.240
+ 8536 (r_gain_350                                                                )          0.219  mV/A    <  F   > MIN :         -0.425 MAX :         -0.280
+ 8537 (r_gain_400                                                                )          0.256  mV/A    <  F   > MIN :         -0.485 MAX :         -0.320
+ 8540 (v_nrp_lim                                                                 )          5.685  V       <  F   > MIN :          5.850 MAX :          6.170
+ 8538 (r_gain_monotonie                                                          )         63.000          <  F   > MIN :         -0.100 MAX :          0.100
+ 8541 (i_ctrl_low                                                                )         -0.170 uA       <  F   > MIN :         -8.400 MAX :         -1.600
+ 8542 (i_ctrl_mid                                                                )         -0.170 uA       <  F   > MIN :        -17.000 MAX :         -5.700
+ 8543 (i_ctrl_high                                                               )         -0.170 uA       <  F   > MIN :        -41.700 MAX :        -15.800
+ 8548 (dc_high_normalised                                                        )          0.118          <  F   > MIN :         15.100 MAX :         21.000
+ 8547 (dc_low_normalised                                                         )          0.077          <  F   > MIN :          8.500 MAX :         14.800
+ 8601 (vref_curreg1                                                              )          0.042  V       <  F   > MIN :          0.293 MAX :          0.328
+ 8602 (vref_curreg2                                                              )          0.052  V       <  F   > MIN :          0.583 MAX :          0.657
+ 8603 (vref_curreg3                                                              )          0.060  V       <  F   > MIN :          0.869 MAX :          0.949
+ 8604 (vref_curlim1                                                              )          1.530  V       <  F   > MIN :          1.202 MAX :          1.314
+ 8631 (i_lim1                                                                    )          0.084  A       <  F   > MIN :          0.586 MAX :          0.655
+ 8632 (i_lim2                                                                    )          0.105  A       <  F   > MIN :          1.166 MAX :          1.315
+ 8633 (i_lim3                                                                    )          0.120  A       <  F   > MIN :          1.738 MAX :          1.898
+ 8634 (i_lim4                                                                    )          3.061  A       <  F   > MIN :          2.403 MAX :          2.629
+ 8606 (vref_curlim3                                                              )          1.518  V       <  F   > MIN :          1.675 MAX :          1.838
+ 8636 (i_lim6                                                                    )          3.037  A       <  F   > MIN :          3.350 MAX :          3.676
+ 8558 (gain_6v                                                                   )        -13.446          <  F   > MIN :          9.150 MAX :         10.800
+ 8560 (gain_5v                                                                   )        -13.454          <  F   > MIN :          9.150 MAX :         10.500
+ 8562 (v_cs_refl                                                                 )       1424.385 mV       <  F   > MIN :        -75.000 MAX :        150.000
+ 8867 (i_sink_pdp                                                                )        165.273 uA       <  F   > MIN :         72.200 MAX :        127.500
+  114 (binning site 114                                                          )              3          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 2164 ********
+
+Part ID: "2164"   Bin:   4   Site:  5   XPos:    26   YPos:     7   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  115 (binning site 115                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 2165 ********
+
+Part ID: "2165"   Bin:   4   Site:  6   XPos:    27   YPos:     7   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  116 (binning site 116                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 2166 ********
+
+Part ID: "2166"   Bin:   4   Site:  7   XPos:    26   YPos:     8   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  117 (binning site 117                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+******** TEST RESULTS PART 2167 ********
+
+Part ID: "2167"   Bin:   4   Site:  8   XPos:    27   YPos:     8   Wafer:  1 
+
+ 4900 (CheckID                                                                   )          1.000          <  F   > MIN :         -0.100 MAX :          0.100
+  118 (binning site 118                                                          )              4          <  F   > MIN :              0 MAX :              2
+
+
+stdftool warnings/errors:
+stdftool - STDF data evaluation tool
+
+Warning: Mismatches in Job 1 (/common/archive/ft_data/mx91/v52241b_ws_rej/mx91_1-v52241b_ws_rej-c188686_105-w01a-250211-121831-1739272709-dlog0001.std.gz): high limit;  Try --warn to display the particulars.
+
+
+Warning: Found part(s) which contain duplicates of parametric tests. Multiple datalogging to the following test numbers (3): 1-3. Try --warn to display the particulars.
+
+Warning: Found part(s) which contain duplicates of parametric tests. Multiple datalogging to the following test numbers (3): 1-3. Try --warn to display the particulars.
+Info: stdftool found 3 warning(s)/info. Check the warning messages before the output.
+Info: The datalog(s) (1) contain STDF records for 1 Jobs, 1 Wafers, 854 Tests, 2214 Parts, 8 Sites (1-8); Try --warn to display the particulars by datalogs.
+
+stdftool needed 0:00 to process 1 jobs containing 1,792,266 STDF records in 109.784187 MB
+
+
+stdftool version information:
+$URL: http://svnhost.elmos.de/department/ds/DS143/stdftool/tags/stdftool_2.14.3/stdftool.c $
+$Id: bitmaps.c 3327 2020-04-21 17:21:17Z aguv $
+$Id: calcdata.cpp 4739 2024-07-04 16:03:07Z aguv $
+$Id: classification.cpp 4678 2024-03-27 12:50:26Z aguv $
+$Id: createlist.cpp 4579 2024-01-15 17:41:23Z aguv $
+$Id: csvread.cpp 4672 2024-03-25 10:16:26Z aguv $
+$Id: dumpdata.cpp 4803 2024-12-11 14:29:43Z aguv $
+$Id: EvaluateRangeFilter.cpp 4755 2024-07-22 14:03:49Z aguv $
+$Id: filters.c 4610 2024-01-29 16:30:55Z aguv $
+$Id: global.c 4777 2024-08-16 15:48:55Z aguv $
+$Id: globalcontainers.c 4771 2024-08-13 15:46:42Z aguv $
+$Id: HashArrayTests.cpp 3844 2021-07-26 21:18:02Z aguv $
+$Id: identification.cpp 4668 2024-03-19 15:51:35Z aguv $
+$Id: odtcontents.c 4754 2024-07-19 14:43:23Z aguv $
+$Id: partdup.cpp 4612 2024-01-30 16:03:36Z aguv $
+$Id: PDFBody.c 4606 2024-01-26 15:04:52Z aguv $
+$Id: pdfout.c 4651 2024-03-08 16:22:22Z aguv $
+$Id: postscript.c 4651 2024-03-08 16:22:22Z aguv $
+$Id: pslogo.c 2088 2018-01-11 16:41:51Z gts $
+$Id: spectabledata.c 4516 2023-11-20 15:15:19Z aguv $
+$Id: spofile.c 4608 2024-01-26 15:48:07Z aguv $
+$Id: sptfile.cpp 4516 2023-11-20 15:15:19Z aguv $
+$Id: sqlout.c 4504 2023-11-10 16:47:55Z aguv $
+$Id: stdfcmdparse.cpp 4745 2024-07-09 17:10:33Z aguv $
+$Id: stdfconvert.c 4813 2025-02-04 09:36:23Z aguv $
+$Id: stdfdata.c 4803 2024-12-11 14:29:43Z aguv $
+$Id: stdfdoc.c 4781 2024-08-27 12:03:47Z aguv $
+$Id: stdfedit.c 4754 2024-07-19 14:43:23Z aguv $
+$Id: stdffile.c 4733 2024-06-28 12:17:34Z aguv $
+$Id: stdffilter.c 3291 2020-03-26 11:04:48Z aguv $
+$Id: stdfmath.c 4656 2024-03-12 14:55:23Z aguv $
+$Id: stdfoptex.c 4186 2022-04-28 14:10:20Z gts $
+$Id: stdfout.c 4780 2024-08-26 17:27:38Z aguv $
+$Id: stdfplot.c 4803 2024-12-11 14:29:43Z aguv $
+$Id: stdfread.c 4787 2024-08-30 14:31:15Z aguv $
+$Id: stdfsort.c 4725 2024-06-14 16:37:20Z aguv $
+$Id: stdftool.c 4815 2025-02-04 17:36:49Z aguv $
+$Id: stdfzlibw.c 4784 2024-08-28 09:55:07Z aguv $
+$Id: StringParser.cpp 4568 2024-01-09 16:02:00Z aguv $
+$Id: tableplot.c 4240 2022-07-06 07:38:32Z gts $
+$Id: testgroup.cpp 3609 2021-02-11 13:00:41Z gts $
+$Id: testidx.cpp 4784 2024-08-28 09:55:07Z aguv $
+$Id: udindata.cpp 3609 2021-02-11 13:00:41Z gts $
+$Id: warnproc.cpp 4724 2024-06-14 11:55:32Z aguv $
+
+User xrav is using Intranet application for calling stdftool, Release 1.2.4, created by fer/IT 2007
+© Elmos Semiconductor SE 
