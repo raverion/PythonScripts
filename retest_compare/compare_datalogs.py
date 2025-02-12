@@ -1,6 +1,7 @@
 import pandas as pd
 import re
 from typing import Dict, List, Tuple
+import os
 
 class ATELogAnalyzer:
     def __init__(self, reference_file: str, retest_file: str):
@@ -51,7 +52,6 @@ class ATELogAnalyzer:
                     continue
                 
                 # Extract test measurements
-                # Updated regex to be more flexible with number formats
                 test_match = re.search(r'^\s*(\d+)\s*\((.*?)\)\s*([-+]?\d*\.?\d*(?:[Ee][-+]?\d+)?)\s*([^\s<]*)\s*<\s*([F]?)\s*>\s*MIN\s*:\s*([-+]?\d*\.?\d*(?:[Ee][-+]?\d+)?|not specified)\s*MAX\s*:\s*([-+]?\d*\.?\d*(?:[Ee][-+]?\d+)?|not specified)', line)
                 if test_match and current_part:
                     test_num, test_name, measurement, unit, fail_flag, min_limit, max_limit = test_match.groups()
@@ -155,11 +155,52 @@ class ATELogAnalyzer:
             worksheet.column_dimensions['A'].width = 15
             worksheet.column_dimensions['B'].width = 50
             worksheet.column_dimensions['C'].width = 50
+        
+        print(f"\nReport generated successfully: {output_file}")
+
+def get_valid_filename(prompt: str) -> str:
+    """Get a valid filename from user input."""
+    while True:
+        filename = input(prompt).strip()
+        if os.path.exists(filename):
+            return filename
+        print(f"Error: File '{filename}' not found. Please enter a valid filename.")
+
+def get_output_filename(prompt: str) -> str:
+    """Get output filename from user input."""
+    while True:
+        filename = input(prompt).strip()
+        if not filename.endswith('.xlsx'):
+            filename += '.xlsx'
+        
+        if os.path.exists(filename):
+            overwrite = input(f"File '{filename}' already exists. Overwrite? (y/n): ").lower()
+            if overwrite == 'y':
+                return filename
+        else:
+            return filename
 
 def main():
-    # Example usage
-    analyzer = ATELogAnalyzer('w01a.txt', 'w01b.txt')
-    analyzer.generate_report('retest_comparison.xlsx')
+    print("\nATE Test Log Comparison Tool")
+    print("============================")
+    
+    # Get input filenames
+    print("\nPlease enter the filenames for analysis:")
+    ref_file = get_valid_filename("First insertion/touchdown datalog file: ")
+    retest_file = get_valid_filename("Retest datalog file: ")
+    
+    # Get output filename
+    output_file = get_output_filename("\nEnter output Excel filename (default extension: .xlsx): ")
+    
+    print("\nProcessing files...")
+    try:
+        analyzer = ATELogAnalyzer(ref_file, retest_file)
+        analyzer.generate_report(output_file)
+    except Exception as e:
+        print(f"\nError during analysis: {str(e)}")
+        return
+    
+    print("\nAnalysis complete!")
 
 if __name__ == "__main__":
     main()
